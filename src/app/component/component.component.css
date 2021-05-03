@@ -1,0 +1,25 @@
+.Computadores{
+  filter: brightness(0.5);
+}
+
+.card-img-filter{
+  filter: brightness(0.5);
+}
+.card-effect .card:hover{
+  transform:  translateY(0px);
+  opacity: 1;
+}
+
+.card{
+  transition-duration: .6s;
+  clip-path: polygon(
+    50% 0,
+    50% 0,
+    100% 50%,
+    100% 50%,
+    50% 100%,
+    50% 100%,
+    0 50%
+    0 50%
+    );
+}

@@ -29,6 +29,10 @@
   margin-left: 0px;
 }
 
+.botonCompra:hover {
+  background: mediumaquamarine;
+}
+
 .vh-50 {
   height: 50vmin;
 }
