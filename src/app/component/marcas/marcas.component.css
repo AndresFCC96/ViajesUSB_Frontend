@@ -1,0 +1,24 @@
+.container{
+  margin-top: 40px;
+}
+
+.media-object-img{
+  --size: 45px;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 15px;
+  margin-left:  200px;
+}
+
+.media-body{
+  margin-right: 100%;
+  margin-left: 10px;
+}
+
+.marcasText{
+  margin-bottom: 20px;
+}
+
+.col-6{
+  align-items: center;
+}
