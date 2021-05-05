@@ -5,23 +5,11 @@
   position: relative;
 }
 
-.container{
-  margin-top: 40px;
-}
 .img-logo{
   width: 100px;
 }
 
-.usersPhoto{
-  width: 140px;
-  height: 140px;
-  justify-content: center;
-}
-
-.usuariosItem{
-  margin-top: 5px;
-}
-
-.productosItem{
-  margin-top: 5px;
+.text-reset{
+  margin-left: 10px;
+  margin-right: 10px;
 }

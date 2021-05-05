@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
+import { Swal } from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +11,11 @@ export class AuthFireService {
   constructor(public angularFireAuth:AngularFireAuth,
               private router:Router) {
     this.angularFireAuth.authState.subscribe(user =>{
- 
+
       if(user){
-     
+
         if(user.emailVerified == false){
-           
+
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -23,20 +23,20 @@ export class AuthFireService {
 
           })
           this.signOut();
-          
+
         }
 
         localStorage.setItem('user',JSON.stringify(user));
       }else{
         localStorage.removeItem('user');
       }
-   
+
     })
    }
 
 
   public createUser(email:string, password:string){
-    
+
     return this.angularFireAuth.createUserWithEmailAndPassword(email,password);
 
   }

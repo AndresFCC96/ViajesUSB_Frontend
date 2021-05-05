@@ -3,23 +3,29 @@
 
     <div class="col-12 text-center">
       <h3 class="text-warning text-uppercase h6">Bienvenido</h3>
-      <h2 class="text-capitalize">¿Que desea hacer?</h2>
+      <h1 class="text-capitalize qDH">¿Que desea hacer?</h1>
     </div>
 
-    <ul class="col-6">
-      <li>
-        <img src="/assets/logos/userPhoto.svg" alt="usersPhotos" class="usersPhoto">
-        Usuarios
+    <ul class="col-6 ">
+      <li class="d-flex justify-content-center usuariosItem">
+        <a routerLink="/UsuariosPanel" class="col-auto text-reset">
+          <img src="/assets/logos/userPhoto.svg" alt="usersPhotos" class="usersPhoto">
+          Usuarios
+        </a>
       </li>
     </ul>
 
     <ul class="col-6">
-      <li>
-        <img src="/assets/logos/products128.png" alt="productsPhotos" class="productsPhotos">
-        Productos
+      <li class="d-flex justify-content-center productosItem">
+        <a href="#" class="col-auto text-reset">
+          <img src="/assets/logos/products128.png" alt="productsPhotos" class="productsPhotos">
+          Productos
+        </a>
       </li>
     </ul>
 
 
   </div>
 </div>
+
+<!-- <app-footer></app-footer> -->

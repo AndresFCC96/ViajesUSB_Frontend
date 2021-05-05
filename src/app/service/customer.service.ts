@@ -9,7 +9,9 @@ import { Customer } from '../domain/customer';
 })
 export class CustomerService {
 
-  private url :string = environment.apiUrl+'api/customer/';
+  // private apiUrl :string = 'http://localhost:9090/';
+
+  private url :string = 'http://localhost:9090/api/customer/';
 
   constructor(public httpClient:HttpClient) {  }
 
@@ -21,7 +23,7 @@ export class CustomerService {
 
   public findAll():Observable<any>{
     let headers=this.createTokenHeader();
-    return this.httpClient.get(this.url+'findAll',{headers:headers}); 
+    return this.httpClient.get(this.url+'findAll',{headers:headers});
   }
 
 
@@ -39,7 +41,7 @@ export class CustomerService {
     let headers=this.createTokenHeader();
     return this.httpClient.post(this.url+'save',customer,{headers:headers});
 
-  }  
+  }
 
   public update(customer:Customer):Observable<any>{
     let headers=this.createTokenHeader();
@@ -50,7 +52,3 @@ export class CustomerService {
 
 
 }
-
-
-
-

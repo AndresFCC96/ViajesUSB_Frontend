@@ -1,0 +1,34 @@
+<div class="text-center bienvenidoTexto">
+  <h1 class="text-warning">Hola, bienvenido</h1>
+  <h3>Este es el listado de los customers inscritos actualmente</h3>
+</div>
+
+<div class="card border-dark mb-3 card">
+  <div class="card-header">Customers</div>
+  <div class="card-body text-dark">
+    <h3 class="card-title">Listado de customers</h3>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>email</th>
+        <th>name</th>
+        <th>address</th>
+        <th>phone</th>
+        <th>token</th>
+        <th>enable</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.address }}</td>
+        <td>{{ customer.phone }}</td>
+        <td>{{ customer.token }}</td>
+        <td>{{ customer.enable }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
