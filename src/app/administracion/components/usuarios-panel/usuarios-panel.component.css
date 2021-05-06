@@ -1,0 +1,14 @@
+.card{
+  width: 1200px;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 400px;
+}
+
+.bienvenidoTexto{
+  margin-top: 25px;
+}
+
+.botonCrear{
+  margin-top: 30px;
+}
