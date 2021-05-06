@@ -1,5 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Customer } from './customer';
+import { CustomerService } from './customer.service';
 
 @Component({
   selector: 'app-usuarios-panel',
@@ -8,32 +10,19 @@ import { Customer } from './customer';
 })
 export class UsuariosPanelComponent implements OnInit {
 
-  customers: Customer[] = [
-    {email: "sergioRoberto@hotmail.com",
-  name: "Sergio Roberto Algarete" ,
-  address: "carrera 21 #45-60" ,
-  phone: "51651223" ,
-  token: "sag254a2w",
-  enable: "A"}, {email: "sergioRoberto@hotmail.com",
-name: "Sergio Roberto Algarete" ,
-address: "carrera 21 #45-60" ,
-phone: "51651223" ,
-token: "sag254a2w",
-enable: "A"}, {email: "sergioRoberto@hotmail.com",
-name: "Sergio Roberto Algarete" ,
-address: "carrera 21 #45-60" ,
-phone: "51651223" ,
-token: "sag254a2w",
-enable: "A"}, {email: "sergioRoberto@hotmail.com",
-name: "Sergio Roberto Algarete" ,
-address: "carrera 21 #45-60" ,
-phone: "51651223" ,
-token: "sag254a2w",
-enable: "A"}
-  ]
-  constructor() { }
+  public customers: Customer[];
 
-  ngOnInit(): void {
+  constructor(private customerService: CustomerService ){}
+
+  ngOnInit(){
+    this.customerService.consultarCustomers().subscribe(
+      (response: Customer[]) => { this.customers = response;},
+      (error: HttpErrorResponse) => { alert(error.message); }
+    );
   }
+
+  // public getCustomers(): void {
+  //
+  // }
 
 }

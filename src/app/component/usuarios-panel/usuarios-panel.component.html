@@ -11,12 +11,14 @@
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th>email</th>
-        <th>name</th>
-        <th>address</th>
-        <th>phone</th>
-        <th>token</th>
-        <th>enable</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Token</th>
+        <th>Enable</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
       </tr>
     </thead>
     <tbody>
@@ -27,7 +29,15 @@
         <td>{{ customer.phone }}</td>
         <td>{{ customer.token }}</td>
         <td>{{ customer.enable }}</td>
+        <td>
+          <button type="button" [routerLink]="['/ModificarUsuariosForm', customer.id]" class="btn btn-primary">editar</button>
+        </td>
+        <td>
+          <button type="button" [routerLink]="['/registroForm', customer.id]" class="btn btn-danger">eliminar</button>
+        </td>
       </tr>
+        <button type="button" routerLink='/ModificarUsuariosForm' class="btn btn-primary botonCrear">Crear Customer</button>
+
     </tbody>
   </table>
   </div>

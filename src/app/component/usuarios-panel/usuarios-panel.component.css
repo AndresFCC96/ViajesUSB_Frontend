@@ -1,18 +1,14 @@
 .card{
-  width: 750px;
+  width: 1200px;
   position: absolute;
   margin-top: 30px;
-  margin-left: 580px;
+  margin-left: 400px;
 }
 
 .bienvenidoTexto{
   margin-top: 25px;
 }
 
-.text-warning{
-  font-size: 30px;
-}
-
-.card-header{
-  font-size: 20px;
+.botonCrear{
+  margin-top: 30px;
 }
