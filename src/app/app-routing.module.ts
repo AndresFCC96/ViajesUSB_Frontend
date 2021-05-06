@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { InicioModule } from './inicio/inicio.module';
-import { AuthModule } from './administracion/auth.module';
+import { AuthModule } from './administracion/administracion.module';
 // import { PagesDashboardRoutingModule } from './pages-dashboard/pages-dashboard.routing';
 // import { PagenofoundComponent } from './pagenofound/pagenofound.component';
 
