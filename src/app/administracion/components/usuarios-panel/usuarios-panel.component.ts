@@ -2,6 +2,10 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Customer } from './customer';
 import { CustomerService } from './customer.service';
+import { Router } from '@angular/router';
+import { EditformComponent } from '../editform/editform.component';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-usuarios-panel',
@@ -10,19 +14,47 @@ import { CustomerService } from './customer.service';
 })
 export class UsuariosPanelComponent implements OnInit {
 
-  public customers: Customer[];
+  public customers: Customer[]
+  public email: string
 
-  constructor(private customerService: CustomerService ){}
+  public editForm: EditformComponent
+
+  constructor(private customerService: CustomerService,
+    public router: Router ){}
 
   ngOnInit(){
+    this.cargarCliente()
+
+  }
+  public cargarCliente(): void {
     this.customerService.consultarCustomers().subscribe(
-      (response: Customer[]) => { this.customers = response;},
-      (error: HttpErrorResponse) => { alert(error.message); }
+      (response: Customer[]) => 
+      { console.log(response);
+      
+        this.customers = response;}
     );
   }
 
-  // public getCustomers(): void {
-  //
-  // }
-
+  public delete(email: string): void {
+    Swal.fire({
+      title: '¿Estas seguro que quieres eliminar?',
+      text: "¡Esto no se va a poder revertir!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Si, eliminalo!'
+    }) .then((result) => {
+      if (result.isConfirmed) {
+        this.customerService.eliminarCustomers(email)
+        .subscribe(() => {
+        }, (error: HttpErrorResponse) => { console.log(error);
+        
+          alert(error.message); }, 
+          () => {this.cargarCliente()}
+        );
+        Swal.fire('Eliminado con exito!', '', 'success')
+      }
+    })
+  }
 }

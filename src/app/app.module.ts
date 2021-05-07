@@ -9,6 +9,7 @@ import { AuthModule } from './administracion/administracion.module';
 import { InicioModule } from './inicio/inicio.module';
 import { CustomerService } from './administracion/components/usuarios-panel/customer.service';
 import { AuthComponent } from './auth/auth.component';
+import { FormsModule } from '@angular/forms'
 
 
 // const redirectToHome = () => redirectUnauthorizedTo(['/']);
@@ -27,7 +28,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpClientModule,
     AuthModule,
-    InicioModule
+    InicioModule,
+    FormsModule
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]

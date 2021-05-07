@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditarformComponent } from './editarform.component';
+import { EditarformComponent } from './saveform.component';
 
 describe('EditarformComponent', () => {
   let component: EditarformComponent;

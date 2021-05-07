@@ -1,0 +1,83 @@
+<app-navbar></app-navbar>
+<p class="text-warning text-center h1 pText">Formulario de creacion de Usuario</p>
+<div class="card border-dark mb-3 cardContainer">
+    <div class="card-header">Editar Usuario</div>
+    <div class="card-body text-dark">
+        <form #customerForm="ngForm">
+            <div class="form-group row mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" [(ngModel)]="customer.email" required minlength="4" #emailVer="ngModel">
+                <div class="alert alert-danger" *ngIf="emailVer.invalid && (emailVer.dirty || emailVer.touched)">
+                    <div *ngIf="emailVer.errors.required">
+                        El email es requerido
+                    </div>
+                    <div *ngIf="emailVer.errors.email">
+                        El email debe de tener un formato valido
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="exampleInputNombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" [(ngModel)]="customer.name" required minlength="4" #nombre="ngModel">
+                <div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                    <div *ngIf="nombre.errors.required">
+                        El nombre es requerido
+                    </div>
+                    <div *ngIf="nombre.errors.required">
+                        El nombre debe de tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="exampleInputDireccion" class="form-label">Direccion</label>
+                <input type="text" class="form-control" name="address" id="address" placeholder="Direccion" [(ngModel)]="customer.address" required minlength="4" #direccion="ngModel">
+                <div class="alert alert-danger" *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)">
+                    <div *ngIf="direccion.errors.required">
+                        La direccion es requerido
+                    </div>
+                    <div *ngIf="direccion.errors.required">
+                        La direccion debe de tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+            <div class="form-group row mb-3">
+                <label for="exampleInputPhone" class="form-label">Telefono</label>
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="Telefono" [(ngModel)]="customer.phone" required minlength="4" #telefono="ngModel">
+                <div class="alert alert-danger" *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)">
+                    <div *ngIf="telefono.errors.required">
+                        El telefono es requerido
+                    </div>
+                    <div *ngIf="telefono.errors.required">
+                        El telefono debe de tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="exampleInputToken" class="form-label">Token</label>
+                <input type="text" class="form-control" name="token" id="token" placeholder="Token" [(ngModel)]="customer.token" required minlength="4" #token="ngModel">
+                <div class="alert alert-danger" *ngIf="token.invalid && (token.dirty || token.touched)">
+                    <div *ngIf="token.errors.required">
+                        El token es requerido
+                    </div>
+                    <div *ngIf="token.errors.required">
+                        El token debe de tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label for="exampleInputEnable" class="form-label">Enable</label>
+                <input type="text" class="form-control" name="enable" id="enable" placeholder="Enable" [(ngModel)]="customer.enable" required minlength="1" #enable="ngModel">
+                <div class="alert alert-danger" *ngIf="enable.invalid && (enable.dirty || enable.touched)">
+                    <div *ngIf="enable.errors.required">
+                        El enable es requerido
+                    </div>
+                    <div *ngIf="enable.errors.required">
+                        El enable debe de tener al menos 4 caracteres
+                    </div>
+                </div>
+            </div>
+            <button  (click)='create()' type="submit" [disabled]="!customerForm.form.valid" class="btn btn-primary">Confirmar</button>
+          </form>
+    </div>
+  </div>

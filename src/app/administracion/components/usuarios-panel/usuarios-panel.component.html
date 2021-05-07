@@ -1,5 +1,4 @@
 <app-navbar></app-navbar>
-
 <div class="text-center bienvenidoTexto">
   <h1 class="text-warning">Hola, bienvenido</h1>
   <h3>Este es el listado de los customers inscritos actualmente</h3>
@@ -9,8 +8,10 @@
   <div class="card-header">Customers</div>
   <div class="card-body text-dark">
     <h3 class="card-title">Listado de customers</h3>
-
-  <table class="table table-bordered table-striped">
+    <div *ngIf="customers?.length < 1" class="alert alert-info">
+      No hay registros en la base de datos
+    </div>
+  <table class="table table-bordered table-striped" *ngIf="customers?.length>0">
     <thead>
       <tr>
         <th>Email</th>
@@ -32,15 +33,16 @@
         <td>{{ customer.token }}</td>
         <td>{{ customer.enable }}</td>
         <td>
-          <button type="button" [routerLink]="['/ModificarUsuariosForm', customer.id]" class="btn btn-primary">editar</button>
+          <button type="button" [routerLink]="['/editUsuarios', customer.email]" routerLinkActive="active" class="btn btn-primary">editar</button>
         </td>
         <td>
-          <button type="button" [routerLink]="['/registroForm', customer.id]" class="btn btn-danger">eliminar</button>
+          <button type="button" (click)='delete(customer.email)'class="btn btn-danger">eliminar</button>
         </td>
       </tr>
-        <button type="button" routerLink='/ModificarUsuariosForm' class="btn btn-primary botonCrear">Crear Customer</button>
+        
 
     </tbody>
   </table>
+  <button type="button" [routerLink]="['/crearUsuarios']"  routerLinkActive="active" class="btn btn-primary botonCrear">Crear Customer</button>
   </div>
 </div>
