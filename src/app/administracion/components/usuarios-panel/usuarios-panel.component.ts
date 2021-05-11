@@ -33,6 +33,7 @@ export class UsuariosPanelComponent implements OnInit {
       
         this.customers = response;}
     );
+
   }
 
   public delete(email: string): void {
