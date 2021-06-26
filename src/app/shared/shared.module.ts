@@ -5,7 +5,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -14,7 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ],
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule
 
   ],
   exports: [

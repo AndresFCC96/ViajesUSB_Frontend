@@ -1,0 +1,113 @@
+<body>
+  <input type="checkbox" id="sidebar-toggle">
+  <div class="sidebar">
+    <div class="sidebar-header mt-4 ">
+      <h3 class="brand">
+        <span class="ti ti-unlink ml-2"></span>
+        <span class="ml-2 mr-4"> ViajesUSB</span>
+      </h3>
+      <label for="sidebar-toggle" class="ti ti-menu-alt"></label>
+    </div>
+
+    <div class="sidebar-menu mt-5">
+      <ul>
+        <li>
+          <a href="" [routerLink]="['/Dashboard']" routerLinkActive="router-link-active">
+            <span class="ti ti-home"></span>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="" [routerLink]="['/Dashboard/DestinoList']" routerLinkActive="router-link-active">
+            <span class="ti ti-location-arrow"></span>
+            <span>Destinos</span>
+          </a>
+        </li>
+        <li>
+          <a href="" [routerLink]="['/Dashboard/TipoDestinoList']" routerLinkActive="router-link-active">
+            <span class="ti ti-flag-alt"></span>
+            <span>Tipos Destinos</span>
+          </a>
+        </li>
+        <li>
+          <a href="" [routerLink]="['/Dashboard/ClienteList']" routerLinkActive="router-link-active">
+            <span class="ti ti-face-smile"></span>
+            <span>Clientes</span>
+          </a>
+        </li>
+        <li>
+          <a href="" [routerLink]="['/Dashboard/TipoIdentificacionList']" routerLinkActive="router-link-active">
+            <span class="ti ti-notepad"></span>
+            <span>Tipos Identificacion</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti ti-close"></span>
+            <span>Salir</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span></span>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-content">
+
+    <main>
+      <form [formGroup]="form" fxLayout="row wrap" fxFlex="100" class="form">
+        <h1>Modificacion de Destino </h1>
+        <div mat-dialog-content class="p-16 m-0" fxLayout="row wrap" fxFlex="100">
+          <label for="Nombre">Ingrese el nombre del destino: </label><br>
+          <input matInput placeholder="Nombre" formControlName="nombre" required minlength="4"><br>
+          <label for="Codigo">Ingrese el codigo del destino: </label><br>
+          <input matInput placeholder="Codigo" formControlName="codigo"><br>
+          <label for="Descripcion">Ingrese la descripcion del destino </label><br>
+          <input matInput placeholder="descripcion" formControlName="descripcion"><br>
+          <label for="aire">Tiene acceso por aire? </label><br>
+          <mat-select formControlName="aire" ><br>
+            <mat-select [placeholder]="'Aire'"> </mat-select>
+            <mat-option [value]="si">S</mat-option>
+            <mat-option [value]="no">N</mat-option>
+          </mat-select><br>
+          <label for="tierra">Tiene acceso por tierra? </label><br>
+          <mat-select formControlName="tierra" ><br>
+            <mat-select [placeholder]="'Tierra'"> </mat-select>
+            <mat-option [value]="si">S</mat-option>
+            <mat-option [value]="no">N</mat-option>
+          </mat-select><br>
+          <label for="mar">Tiene acceso por mar? </label><br>
+          <mat-select formControlName="mar" ><br>
+            <mat-select [placeholder]="'Mar'"> </mat-select>
+            <mat-option [value]="si">S</mat-option>
+            <mat-option [value]="no">N</mat-option>
+           </mat-select><br>
+
+          <label for="usuCrador">Ingrese su usuario creador: </label><br>
+          <input matInput placeholder="usuario creador" formControlName="usuCreador"><br>
+          <label for="usuCrador">Ingrese su usuario Modificador: </label><br>
+          <input matInput placeholder="usuario modificador" formControlName="usuModificador"><br>
+          <label for="tipoDestinoCodigo">Elija su tipo de destino: </label><br>
+          <mat-select formControlName="tipoDestinoCodigo" >
+            <mat-select [placeholder]="'Tipos destinos'"> </mat-select>
+            <mat-option *ngFor="let tide of tipoDestinos" [value]="tide.idTide">{{tide.codigo}}</mat-option>
+          </mat-select>
+        </div>
+        <div mat-dialog-actions class="m-2 p-16 finalButtons" fxLayout="row" fxFlex="100" fxLayoutAlign="end center">
+            <button fxFlex.xs="100"  mat-stroked-button class="cancelar" color="warn" [routerLink]="['/Dashboard/DestinoList']" routerLinkActive="router-link-active">
+                Cancelar
+            </button>
+            <button fxFlex.xs="100" class="crear" mat-stroked-button (click)="editarDestino()" >
+                Editar
+            </button>
+        </div>
+    </form>
+    </main>
+  </div>
+
+</body>

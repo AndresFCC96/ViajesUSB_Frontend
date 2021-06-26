@@ -1,39 +1,40 @@
 <header class="header">
-  <div class="container vh-50">
-
-    <!-- Navbar -->
+  <div class="container vh-80">
     <nav class="row text-white justify-content-between align-items-center text-uppercase ">
-    <!-- Logo -->
-    <a href="#" class="col-auto text-reset">
-      <img src="./assets/logos/Distriunidos fondo.png" alt="Logo Distriunidos" class="img-logo">
-      Distriunidos
-    </a>
-    <!-- Anclas -->
+      <a href="" class="col-auto text-reset">
+        <img src="../assets/logos/LogoUSBViajes.png" alt="LogoUSBViajes" class="img-logo">
+        ViajesUSB
+      </a>
+
+      <!-- Anclas -->
     <div class="col-auto">
       <a href="#" class="text-reset pr-3">Inicio</a>
-      <a href="#" class="text-reset pr-3">Acerca de Nosotros</a>
-      <a href="#" class="text-reset pr-3">Productos</a>
-      <a [routerLink]="['/Login']" routerLinkActive="active" class="text-reset">Ingresar</a>
+      <a href="#" [routerLink]="['/Destinos']" routerLinkActive="active" class="text-reset pr-3">Destinos</a>
+      <a href="#" [routerLink]="['Login']" routerLinkActive="active" class="text-reset">Ingresar</a>
+      <!--  -->
     </div>
+
     </nav>
     <!-- Descripcion -->
     <div class="row h-100 align-items-center">
-      <div class="col-6 text-white">
+      <div class="col-6 text-white mt-4">
         <!-- titulo -->
         <h1 class="text-capitalize">
-          <span class="text-warning h5">Tecnologia de punta</span> <br>
-          hasta tu puerta
+          <span class="text-success h5">Los destinos mas bellos del mundo</span> <br>
+          A tu alcance
         </h1>
         <!-- Descripcion -->
-        <p>
+        <p class="text-success font-weight-bolder">
           Somos una empresa encargada <br>
-          de brindarte la tecnologia mas reciente <br>
-          del mercado hasta la puerta de tu casa.
+          de brindarte los medios de transportes mas
+          actualizados del mundo para que puedas visitar los
+          lugares que siempre quisiste.
         </p>
         <!-- Btn -->
-        <a href="#" class="text-reset btn btn-warning botonCompra">Mira nuestros productos</a>
+        <a href="#" class="text-reset btn btn-warning botonCompra">Mira nuestros planes</a>
       </div>
     </div>
+
   </div>
   <img src="/assets/images/cut-header.svg" alt="">
 </header>

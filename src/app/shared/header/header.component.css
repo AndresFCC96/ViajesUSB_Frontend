@@ -1,12 +1,20 @@
 .header{
-  background-image: url(/assets/images/sergey-sokolov-_g4MxOaBNvs-unsplash.jpg);
+  background-image: url(/assets/images/hills.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
 }
 
+a{
+  font-weight: bolder;
+}
+
+p{
+  font-weight: bolder;
+}
 .img-logo{
-  width: 100px;
+  margin-top: 15px;
+  height: 120px;
 }
 
 .header::after{
@@ -35,4 +43,9 @@
 
 .vh-50 {
   height: 50vmin;
+}
+
+.text-success{
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

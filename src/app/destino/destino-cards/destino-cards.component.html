@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px">
+
+    <div fxFlex="20"
+            *ngFor="let destino of destinos"
+            fxFlex.xs="10"
+            fxFlex.lg="15"
+            fxFlex.sm="20">
+
+        <mat-card>
+            <mat-card-header>
+                {{destino.nombre}}
+            </mat-card-header>
+            <mat-card-subtitle>
+              {{destino.codigo}}
+            </mat-card-subtitle>
+
+            <img mat-card-image src="../assets/images/busSmall.jpg">
+
+            <mat-card-content>
+
+                <!-- <h3>Tipo destino: {{destino.tipoDestinoCodigo}}</h3> -->
+
+                <p>
+                    <strong>Acceso por aire? </strong> {{destino.aire}}
+                </p>
+                <p>
+                    <strong>Acceso por mar? </strong> {{destino.mar}}
+                </p>
+                <p>
+                    <strong>Acceso por tierra? </strong> {{destino.tierra}}
+                </p>
+
+            </mat-card-content>
+
+        </mat-card>
+
+    </div>
+</div>

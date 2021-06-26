@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 
 import { AuthRoutingModule } from './administracion-routing.module';
-import { LoginComponent } from '../auth/login/login.component';
 import { SharedModule } from '../shared/shared.module';
 import { MainAdministradorComponent } from './components/main-administrador/main-administrador.component';
 import { RouterLink, RouterModule } from '@angular/router';
@@ -11,14 +10,17 @@ import { UsuariosPanelComponent } from './components/usuarios-panel/usuarios-pan
 import { SaveformComponent } from './components/saveform/saveform.component';
 import { FormsModule } from '@angular/forms';
 import { EditformComponent } from './components/editform/editform.component';
+import { AdministracionComponent } from './administracion.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, 
+  declarations: [LoginComponent,
     MainAdministradorComponent,
     UsuariosPanelComponent,
     SaveformComponent,
-    EditformComponent],
+    EditformComponent,
+    AdministracionComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -30,8 +32,11 @@ import { EditformComponent } from './components/editform/editform.component';
     MainAdministradorComponent,
     UsuariosPanelComponent,
     EditformComponent,
-    SaveformComponent
+    SaveformComponent,
+    AdministracionComponent
     // RouterLink
   ]
 })
-export class AuthModule { }
+export class AuthModule {
+  autenticacion:boolean = false;
+}

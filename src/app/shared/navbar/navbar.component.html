@@ -2,18 +2,16 @@
   <div class="container ">
 
     <!-- Navbar -->
-    <nav class="row text-white justify-content-between align-items-center text-uppercase ">
+    <nav class="row text-white justify-content-between align-items-center text-uppercase font-weight-bolder">
       <!-- Logo -->
       <a href="#" class="col-auto text-reset">
-        <img src="./assets/logos/Distriunidos fondo.png" alt="Logo Distriunidos" class="img-logo">
-        Distriunidos
+        <img src="./assets/logos/LogoUSBViajes.png" alt="Logo Distriunidos" class="img-logo">
+        ViajesUSB
       </a>
       <!-- Anclas -->
       <div class="col-auto navegadores" >
-        <a rotuerLink='/Inicio' class="text-reset pr-3">Inicio</a>
-        <a href="#" class="text-reset pr-3">Acerca de Nosotros</a>
-        <a href="#" class="text-reset pr-3">Productos</a>
-        <a routerLink="/IngresoUsuarios" class="text-reset">Ingresar</a>
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" class="text-reset pr-3">Inicio</a>
+        <a [routerLink]="['/Login']" routerLinkActive="router-link-active" class="text-reset">Ingresar</a>
       </div>
     </nav>
     <!-- Descripcion -->

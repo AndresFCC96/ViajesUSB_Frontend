@@ -5,6 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 // import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { InicioModule } from './inicio/inicio.module';
 import { AuthModule } from './administracion/administracion.module';
+import { DestinoModule } from './destino/destino.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+
 // import { PagesDashboardRoutingModule } from './pages-dashboard/pages-dashboard.routing';
 // import { PagenofoundComponent } from './pagenofound/pagenofound.component';
 
@@ -21,7 +24,9 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     InicioModule,
-    AuthModule
+    AuthModule,
+    DestinoModule,
+    DashboardModule
 
     // AuthRoutingModule,
     // PagesDashboardRoutingModule

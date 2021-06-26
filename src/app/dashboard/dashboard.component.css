@@ -1,0 +1,259 @@
+:root{
+  --main-color: #027581;
+  --color-dark: #1D2231;
+  --text-grey: #8390A2;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+th, td {
+padding: 15px;
+text-align: left;
+color: var(--color-dark);
+}
+
+#sidebar-toggle{
+display: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 290px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: #027581;
+  color: #fff;
+  overflow-y: auto;
+  transition: width 500ms;
+}
+
+.sidebar-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0rem 1rem;
+}
+
+.sidebar-menu{
+  padding: 1rem;
+}
+
+
+.sidebar li{
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+.sidebar a span:last-child {
+padding-left: .6rem;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+width: 60px;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span,
+#sidebar-toggle:checked ~ .sidebar li span:last-child{
+display: none;
+}
+
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header,
+#sidebar-toggle:checked ~ .sidebar li{
+display: flex;
+justify-content: center;
+}
+
+#sidebar-toggle:checked ~ .main-content {
+left: -220px;
+}
+
+#sidebar-toggle:checked ~ .main-content header {
+left: 60px;
+width: 100%;
+}
+
+.main-content{
+  position: relative;
+  margin-left: -120px;
+  margin-bottom: 1rem;
+  width: 2000px;
+  transition: margin-left 500ms;
+}
+
+
+.social-icons{
+display: flex;
+align-items: center;
+}
+
+.social-icons span,
+.social-icons div{
+margin-left: 0.8rem;
+font-size: 1.2rem;
+
+}
+
+.social-icons div{
+height: 40px;
+width: 40px;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url(/assets/images/walter.jpg);
+border-radius: 50%;
+}
+
+main {
+  margin-top: 60px;
+  background: #f1f5f9;
+  min-height: 90vh;
+  padding: 4rem;
+  width: 100%;
+}
+
+.dash-title{
+color: #1D2231;
+margin-bottom: 1rem;
+}
+
+.dash-cards{
+display: flex;
+margin: 15px;
+}
+
+.card-single{
+background: #fff;
+border-radius: 15px;
+margin-right: 50px;
+height: 100px;
+}
+
+.card-body{
+padding: 1rem;
+display: flex;
+align-items: center;
+}
+
+.card-body span{
+font-size: 1.8rem;
+color: #777;
+}
+
+.listaCard{
+margin-top: 40px;
+width: 1300px;
+align-items: center;
+margin-bottom: 60px;
+}
+.card-header{
+height: 40px;
+background: #fff;
+}
+
+.table-hover {
+width: 1200px;
+margin-bottom: 40px;
+}
+
+.btn{
+height: 30px;
+width: 80px;
+margin-left: -40px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(90,97,105,0.1), 0 0.9375rem 1.40625rem rgba(90,97,105,0.1), 0 0.25rem 0.53125rem rgba(90,97,105,0.12), 0 0.125rem 0.1875rem rgba(90,97,105,0.1);
+}
+.l-bg-cherry {
+  background: linear-gradient(to right, #493240, #f09) !important;
+  color: #fff;
+}
+
+.l-bg-blue-dark {
+  background: linear-gradient(to right, #373b44, #4286f4) !important;
+  color: #fff;
+}
+
+.l-bg-green-dark {
+  background: linear-gradient(to right, #0a504a, #38ef7d) !important;
+  color: #fff;
+}
+
+.l-bg-orange-dark {
+  background: linear-gradient(to right, #a86008, #ffba56) !important;
+  color: #fff;
+}
+
+.card .card-statistic-3 .card-icon-large .fas, .card .card-statistic-3 .card-icon-large .far, .card .card-statistic-3 .card-icon-large .fab, .card .card-statistic-3 .card-icon-large .fal {
+  font-size: 110px;
+}
+
+.card .card-statistic-3 .card-icon {
+  text-align: center;
+  line-height: 50px;
+  margin-left: 15px;
+  color: #000;
+  position: absolute;
+  right: -5px;
+  top: 20px;
+  opacity: 0.1;
+}
+
+.l-bg-cyan {
+  background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+  color: #fff;
+}
+
+.l-bg-green {
+  background: linear-gradient(135deg, #23bdb8 0%, #43e794 100%) !important;
+  color: #fff;
+}
+
+.l-bg-orange {
+  background: linear-gradient(to right, #f9900e, #ffba56) !important;
+  color: #fff;
+}
+
+.l-bg-cyan {
+  background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+  color: #fff;
+}
+
+.cartas{
+  margin-left: 350px;
+  left: 20px;
+}
+
+.imgUser{
+  height: 300px;
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 610px;
+  border-radius: 50%;
+}
+
+.Nombre{
+  margin-top: 40px;
+  margin-left: 660px;
+}
+

@@ -1,0 +1,100 @@
+<body>
+  <input type="checkbox" id="sidebar-toggle">
+  <div class="sidebar">
+    <div class="sidebar-header mt-4 ">
+      <h3 class="brand">
+        <span class="ti ti-unlink ml-2"></span>
+        <span class="ml-2 mr-4"> ViajesUSB</span>
+      </h3>
+      <label for="sidebar-toggle" class="ti ti-menu-alt"></label>
+    </div>
+
+    <div class="sidebar-menu mt-5">
+      <ul>
+        <li>
+          <a href="" [routerLink]="['/Dashboard']" routerLinkActive="router-link-active">
+            <span class="ti ti-home"></span>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="" [routerLink]="['/Dashboard/DestinoList']" routerLinkActive="router-link-active">
+            <span class="ti ti-location-arrow"></span>
+            <span>Destinos</span>
+          </a>
+        </li>
+        <li>
+          <a href="" [routerLink]="['/Dashboard/TipoDestinoList']" routerLinkActive="router-link-active">
+            <span class="ti ti-flag-alt"></span>
+            <span>Tipos Destinos</span>
+          </a>
+        </li>
+        <li>
+          <a href="" [routerLink]="['/Dashboard/ClienteList']" routerLinkActive="router-link-active">
+            <span class="ti ti-face-smile"></span>
+            <span>Clientes</span>
+          </a>
+        </li>
+        <li>
+          <a href="" [routerLink]="['/Dashboard/TipoIdentificacionList']" routerLinkActive="router-link-active">
+            <span class="ti ti-notepad"></span>
+            <span>Tipos Identificacion</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti ti-close"></span>
+            <span>Salir</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span></span>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-content">
+
+    <main>
+      <h1 class="titulo">Destino</h1>
+      <table class="table tablaCliente">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">nombre</th>
+            <th scope="col">codigo</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let destino of destinos">
+            <th scope="row">{{destino.idDest}}</th>
+            <td>{{destino.nombre}}</td>
+            <td>{{destino.codigo}}</td>
+            <td>{{destino.descripcion}}</td>
+            <td>{{destino.estado}}</td>
+            <td>
+              <button class="editar" [routerLink]="['/Dashboard/EditDestino', destino.idDest]" routerLinkActive="router-link-active">
+                Editar
+              </button>
+            </td>
+            <td>
+              <button class="eliminar" (click)="delete(destino.idDest)">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="crear" [routerLink]="['/Dashboard/SaveDestino']" routerLinkActive="router-link-active">
+        Crear Destino
+      </button>
+    </main>
+  </div>
+
+</body>

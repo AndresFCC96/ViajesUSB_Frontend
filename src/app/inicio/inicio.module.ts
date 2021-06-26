@@ -4,9 +4,10 @@ import { InicioComponent } from './inicio.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { ProductosComponent } from './productos/productos.component';
-import { MarcasComponent } from './marcas/marcas.component';
-import { AuthModule } from '../administracion/administracion.module';
-import { LoginComponent } from '../auth/login/login.component';
+// import { AuthModule } from '../administracion/administracion.module';
+
+import { DestinoModule } from '../destino/destino.module';
+import { LoginComponent } from '../administracion/components/login/login.component';
 
 
 const routes: Routes = [
@@ -20,13 +21,14 @@ const routes: Routes = [
   declarations: [
     InicioComponent,
     ProductosComponent,
-    MarcasComponent],
+    ],
   imports: [
     RouterModule.forRoot(routes),
     CommonModule,
     SharedModule,
-    AuthModule
-    
+    // AuthModule,
+    DestinoModule
+
   ],
   exports: [RouterModule]
 })

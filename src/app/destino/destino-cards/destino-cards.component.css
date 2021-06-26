@@ -1,0 +1,9 @@
+.body {
+  background: url('/assets/images/busSmall.jpg') no-repeat center center fixed !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  min-height: 100% !important;
+
+}

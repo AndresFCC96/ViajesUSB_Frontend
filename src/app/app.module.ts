@@ -9,8 +9,11 @@ import { AuthModule } from './administracion/administracion.module';
 import { InicioModule } from './inicio/inicio.module';
 import { CustomerService } from './administracion/components/usuarios-panel/customer.service';
 import { AuthComponent } from './auth/auth.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 // const redirectToHome = () => redirectUnauthorizedTo(['/']);
 
@@ -29,7 +32,10 @@ const routes: Routes = [
     HttpClientModule,
     AuthModule,
     InicioModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    DashboardModule
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]

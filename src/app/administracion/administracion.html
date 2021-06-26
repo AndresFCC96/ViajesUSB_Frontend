@@ -1,0 +1,225 @@
+<body>
+  <header class="header">
+    <div class="container ">
+
+      <!-- Navbar -->
+      <nav class="row text-white justify-content-between align-items-center text-uppercase ">
+        <!-- Logo -->
+        <a href="#" class="col-auto text-reset">
+          <img src="./assets/logos/Distriunidos fondo.png" alt="Logo Distriunidos" class="img-logo">
+          Distriunidos
+          <input type="checkbox" id="sidebar-toggle">
+          <label for="sidebar-toggle" class="ti ti-menu-alt"></label>
+        </a>
+      </nav>
+      <!-- Descripcion -->
+
+    </div>
+  </header>
+  <div class="sidebar">
+    <div class="sidebar-header mt-4 justify-content-center">
+      <img src="./assets/images/Metasweat.jpg" alt="Logo-usuario" class="Avatar">
+    </div>
+    <p class="nombreUsuario h3 justify-content-center">Bienvenido {{nombre}}</p>
+
+    <div class="sidebar-menu">
+      <ul>
+        <li>
+          <a href="" class="text-reset">
+            <span class="ti ti-home"></span>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti ti-face-smile"></span>
+            <span>Usuarios</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti ti-briefcase"></span>
+            <span>Formularios</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="ti ti-close"></span>
+            <span>Salir</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span></span>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main-content">
+
+    <!-- <main>
+
+      <h2 class="dash-title ">General</h2>
+
+      <div class="dash-cards ">
+
+          <div class="card-single pendientes">
+            <div class="card-body">
+                <span class="ti ti-briefcase mr-2"></span>
+                <div>
+                  <h5>Numero de Usuarios</h5>
+                  <h4>3</h4>
+                </div>
+              </div>
+              <div class="card-footer pendientes">
+                <a href="" class="ml-3">Mostrar Todo</a>
+              </div>
+            </div>
+
+            <div class="card-single aprobado">
+              <div class="card-body">
+                  <span class="ti ti-briefcase mr-2"></span>
+                  <div>
+                    <h5>Solicitudes Aprobadas</h5>
+                    <h4>3</h4>
+                  </div>
+                </div>
+                <div class="card-footer aprobado">
+                  <a href="" class="ml-3">Mostrar Todo</a>
+                </div>
+              </div>
+
+              <div class="card-single rechazadas">
+                <div class="card-body">
+                    <span class="ti ti-briefcase mr-2"></span>
+                    <div>
+                      <h5>Solicitudes Rechazadas</h5>
+                      <h4>3</h4>
+                    </div>
+                  </div>
+                  <div class="card-footer rechazadas">
+                    <a href="" class="ml-3">Mostrar Todo</a>
+                  </div>
+                </div>
+
+                <div class="card-single enProceso">
+                  <div class="card-body">
+                      <span class="ti ti-briefcase mr-2"></span>
+                      <div>
+                        <h5>Solicitudes en Proceso</h5>
+                        <h4>3</h4>
+                      </div>
+                    </div>
+                    <div class="card-footer enProceso">
+                      <a href="" class="ml-3">Mostrar Todo</a>
+                    </div>
+                  </div>
+          </div>
+
+          <div class="card border-secondary listaCard ml-4" >
+            <div class="card-header">
+              <h1 class="m-2">Lista de Solicitudes</h1>
+            </div>
+            <div class="card-body">
+              <table style="overflow: auto display: inline-block" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Programa:</th>
+                    <th scope="col">Usuario:</th>
+                    <th scope="col">Fecha:</th>
+                    <th scope="col">Estado:</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Luis Alfredo Rangel</td>
+                    <td>25/04/2021</td>
+                    <td>Pendiente</td>
+                  </tr>
+                  <tr class="table-success">
+                    <th scope="row">Construccion en sitio propio</th>
+                    <td>Juan Pablo Caro</td>
+                    <td>25/04/2021</td>
+                    <td>Aprobado</td>
+                  </tr>
+                  <tr class="table-danger">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Maria Jose Serrano</td>
+                    <td>25/04/2021</td>
+                    <td>Rechazado</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                  <tr class="table-warning">
+                    <th scope="row">Vivienda nueva</th>
+                    <td>Alejandra Mazuera</td>
+                    <td>25/04/2021</td>
+                    <td>En proceso</td>
+                  </tr>
+                </tbody>
+            </table>
+
+            </div>
+          </div>
+
+
+    </main> -->
+  </div>
+
+</body>
